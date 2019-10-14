@@ -1,20 +1,19 @@
-# Date and time
+# Date 객체와 날짜
 
-Let's meet a new built-in object: [Date](mdn:js/Date). It stores the date, time and provides methods for date/time management.
+날짜를 저장할 수 있고, 날짜와 관련된 메서드도 제공해주는 내장 객체 [Date](mdn:js/Date)에 대해 알아봅시다(일시(날짜/시간)를 날짜와 혼용해서 사용하겠습니다 - 옮긴이).
 
-For instance, we can use it to store creation/modification times, to measure time, or just to print out the current date.
+Date 객체를 활용하면 생성 및 수정 시간을 저장하거나 시간 측정을 측정할 수 있고, 현재 날짜를 출력하는 용도 등으로도 활용할 수 있습니다.
 
-## Creation
+## 객체 생성하기
 
-To create a new `Date` object call `new Date()` with one of the following arguments:
+`new Date()`를 호출하면 새로운 `Date` 객체가 만들어지는데, `new Date()`는 다음과 같은 형태로 호출할 수 있습니다.
 
 `new Date()`
-: Without arguments -- create a `Date` object for the current date and time:
+: 인수 없이 호출하면 현재 날짜와 시간이 저장된 `Date` 객체가 반환됩니다.
 
     ```js run
     let now = new Date();
-    alert( now ); // shows current date/time
-    ```
+    alert( now ); // 현재 날짜 및 시간이 출력됨
 
 `new Date(milliseconds)`
 : Create a `Date` object with the time equal to number of milliseconds (1/1000 of a second) passed after the Jan 1st of 1970 UTC+0.
